@@ -4,7 +4,7 @@ const result = document.getElementById('result');
 
 checkBtn.addEventListener('click', () => {
     const { value: original } = textInput;
-    const value = original.replaceAll(/[-_ ,\.\(\)\\\/]/g, '').toLowerCase();
+    const value = original.replaceAll(/[^a-zA-Z]/g, '').toLowerCase();
     if (!value) {
         alert('Please input a value');
         return;
