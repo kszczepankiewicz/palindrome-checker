@@ -9,6 +9,6 @@ checkBtn.addEventListener('click', () => {
         alert('Please input a value');
         return;
     }
-    if (value === [...value].reverse().join('')) result.textContent = `${original}  is a palindrome`;
+    if (value === [...value].reverse().join('')) result.textContent = `${original} is a palindrome`;
     else result.textContent = `${original} is not  a palindrome`
 });
