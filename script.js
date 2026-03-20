@@ -5,7 +5,10 @@ const result = document.getElementById('result');
 checkBtn.addEventListener('click', () => {
     const { value: original } = textInput;
     const value = original.replaceAll(/[-_ ,\.\(\)\\\/]/g, '').toLowerCase();
-    if (value === '') alert('Please input a value');
+    if (!value) {
+        alert('Please input a value');
+        return;
+    }
     if (value === [...value].reverse().join('')) result.textContent = `${original}  is a palindrome`;
     else result.textContent = `${original} is not  a palindrome`
 });
